@@ -28,9 +28,7 @@ AWS_SES_REGION_NAME=
 EMAIL_FROM=
 ```
 
-**you need to create a .env folder and inside create a django file**
-
-**Each time that activate the virtualenv, run this command**
+**You should create a .env folder and a django file inside it.**
 
 
 - To build the entire project, we enter the following command:
