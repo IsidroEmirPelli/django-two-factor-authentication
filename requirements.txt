@@ -1,0 +1,5 @@
+django==4.0.7
+redis==4.3.4
+psycopg2-binary==2.9.2
+boto3
+PyJWT

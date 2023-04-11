@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: django_web
+    # '/start' is the shell script used to run the service
+    command: /start
+    # this volume is used to map the files and folders on the host to the container
+    # so if we change code on the host, code in the docker container will also be changed
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    # env_file is used to manage the env variables of our project
+    env_file:
+      - ./.env/.dev-sample
+    depends_on:
+      # - redis
+      - db
+
+  db:
+    image: postgres:14-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=hello_django
+      - POSTGRES_USER=hello_django
+      - POSTGRES_PASSWORD=hello_django
+
+volumes:
+  postgres_data:
