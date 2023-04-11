@@ -61,3 +61,10 @@ docker-compose run --rm web python manage.py createsuperuser
 
 - `localhost:8000/dashboard` At that URL, you have access to the dashboard. ONLY LOGGED
 - `localhost:8000/two_factor/` That URL is the section where the authentication factor is generated, and access is only possible with a specific token that is stored in the server's cache and is auto-generated uniquely.
+
+
+#### Templates source:
+
+- Email https://github.com/konsav/email-templates/
+
+- Login https://mdbootstrap.com/docs/standard/extended/login/
