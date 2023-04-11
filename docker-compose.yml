@@ -16,7 +16,7 @@ services:
       - 8000:8000
     # env_file is used to manage the env variables of our project
     env_file:
-      - ./.env/.dev-sample
+      - ./.env/django
     depends_on:
       # - redis
       - db
