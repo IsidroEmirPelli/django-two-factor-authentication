@@ -89,7 +89,7 @@ def send_email(
 def send_email_two_factor(email, code):
     subject = "Two factor authentication"
     recipients = [email]
-    from_email = os.environ.get("EMAIL_HOST_USER")
+    from_email = os.environ.get("EMAIL_FROM")
     from_name = os.environ.get("FROM_NAME")
     context = {"code": code}
     html_content = render_to_string("email_two_factor.html", context)
