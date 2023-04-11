@@ -21,11 +21,14 @@ SQL_PORT=5432
 # This hash will be used for the token encryption later on.
 HASHING_SECRET=some_thing
 
-#AWS THINGS
+#Aws things
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 AWS_SES_REGION_NAME=
+
+#Email things
 EMAIL_FROM=
+FROM_NAME=
 ```
 
 **You should create a .env folder and a django file inside it.**
